@@ -6,30 +6,25 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Ghibli Mori"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="true"
-
         android:theme="@style/Theme.GhibliMori">
 
         <!-- HomeActivity is now the launcher -->
         <activity
-            android:name=".ui.home.HomeActivity"
+            android:name=".ui.home.MarketplaceActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <!-- MainActivity -->
+        </activity> <!-- MainActivity -->
         <activity android:name=".MainActivity" />
-
     </application>
-
 
 </manifest>
