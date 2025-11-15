@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9F7F1"
@@ -10,23 +11,34 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/figureImage"
+        <!-- Product Image -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/figure1"/>
+            app:cardCornerRadius="60dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false">
 
+            <ImageView
+                android:id="@+id/figureImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/figure1" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Product Name -->
         <TextView
-            android:id="@+id/figureName"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Totoro Plush"
+            android:text="Forest Guardian Totoro Plush"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
-            android:textColor="#2F2F2F"/>
+            android:textColor="#2F2F2F" />
 
+        <!-- Price -->
         <TextView
             android:id="@+id/figurePrice"
             android:layout_width="match_parent"
@@ -34,23 +46,163 @@
             android:text="$34.99"
             android:textColor="#4CAF50"
             android:textSize="18sp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp" />
 
+        <!-- Description -->
+        <TextView
+            android:id="@+id/figureName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#2F2F2F" />
         <TextView
             android:id="@+id/figureDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="A soft Totoro plush inspired by the enchanted forest."
-            android:textSize="16sp"
-            android:layout_marginTop="12dp"/>
+            android:text="This ultra-soft Totoro plush captures the charm of Studio Ghibli’s forest spirit—perfect for fans and collectors."            android:textSize="16sp"
+            android:layout_marginTop="12dp" />
 
+        <!-- Quantity Selector -->
+        <LinearLayout
+            android:id="@+id/quantitySelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/decreaseButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="–"
+                android:textSize="18sp"
+                android:backgroundTint="#8BC34A"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/quantityText"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#2F2F2F"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/increaseButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:textSize="18sp"
+                android:backgroundTint="#8BC34A"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+
+
+        <!-- Add to Bag Button -->
         <Button
-            android:id="@+id/buyButton"
+            android:id="@+id/addToBagButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buy Now"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
             android:backgroundTint="#8BC34A"
-            android:textColor="#FFFFFF"/>
+            android:text="Add to Bag"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:id="@+id/ratingSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal">
+
+            <!-- Single Star Icon -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:tint="#FFD700" />
+                <!--android:src="@drawable/ic_star_filled"-->
+
+
+            <!-- Rating Text -->
+            <TextView
+                android:id="@+id/ratingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5 ★ (120 reviews)"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Reviews"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2F2F2F"
+            android:layout_marginTop="24dp" />
+
+        <!-- Review 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ 5.0 — Amina"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#4CAF50" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Absolutely adorable! The plush is super soft and looks just like Totoro. Great quality and fast shipping."
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Review 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ 4.5 — Youssef"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#4CAF50" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Very cute and well-made. The embroidery is detailed and the plush feels premium. Would buy again!"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
     </LinearLayout>
+
 </ScrollView>

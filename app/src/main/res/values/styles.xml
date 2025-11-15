@@ -1,0 +1,4 @@
+<style name="RoundedImageStyle"
+    parent="Base.Widget.MaterialComponents.ImageView.Shapeable">
+
+</style>
