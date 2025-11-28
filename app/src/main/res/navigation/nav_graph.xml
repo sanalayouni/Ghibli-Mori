@@ -9,6 +9,12 @@ app:startDestination="@id/navigation_home">
     android:name="sana.ghiblimori.HomeFragment"
     android:label="Home" />
 
+    <fragment
+        android:id="@+id/itemFigureFragment"
+        android:name="sana.ghiblimori.ItemDetailActivity"
+        android:label="Product Details"
+         />
+
 <!--<fragment
     android:id="@+id/navigation_search"
     android:name="com.yourpackage.SearchFragment"

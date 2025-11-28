@@ -10,6 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <!-- Top Bar -->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:src="@drawable/ic_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </LinearLayout>
 
         <!-- Product Image -->
         <androidx.cardview.widget.CardView
@@ -32,7 +51,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Forest Guardian Totoro Plush"
+            android:text="Totoro Plush"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp"
@@ -43,7 +62,7 @@
             android:id="@+id/figurePrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="$34.99"
+            android:text="50dt"
             android:textColor="#4CAF50"
             android:textSize="18sp"
             android:layout_marginTop="8dp" />
@@ -63,7 +82,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="This ultra-soft Totoro plush captures the charm of Studio Ghibli’s forest spirit—perfect for fans and collectors."            android:textSize="16sp"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="12dp"
+            android:textColor="#6e6e6e"/>
 
         <!-- Quantity Selector -->
         <LinearLayout
@@ -77,10 +97,10 @@
                 android:id="@+id/decreaseButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="–"
+                android:text="-"
                 android:textSize="18sp"
                 android:backgroundTint="#8BC34A"
-                android:textColor="#FFFFFF" />
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/quantityText"
@@ -163,7 +183,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⭐ 5.0 — Amina"
+                android:text="Amina ⭐ 5.0 "
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#4CAF50" />
@@ -190,7 +210,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⭐ 4.5 — Youssef"
+                android:text="Youssef  ⭐ 5.0"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#4CAF50" />

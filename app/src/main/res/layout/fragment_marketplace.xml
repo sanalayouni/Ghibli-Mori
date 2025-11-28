@@ -178,6 +178,7 @@
                 android:elevation="4dp">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/productCard1"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     app:cardCornerRadius="16dp"

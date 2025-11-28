@@ -168,6 +168,7 @@
             <!-- Copy your figure cards here -->
             <!-- Example item -->
             <LinearLayout
+                android:id="@+id/itemCard1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -212,6 +213,7 @@
 
 
             <LinearLayout
+                android:id="@+id/itemCard2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -254,6 +256,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/itemCard3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -297,6 +300,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/itemCard4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -339,6 +343,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/itemCard6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -381,6 +386,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/itemCard7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -422,6 +428,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/itemCard8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -463,6 +470,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/itemCard9"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
