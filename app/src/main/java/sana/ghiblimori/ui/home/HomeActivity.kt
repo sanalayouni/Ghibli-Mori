@@ -31,9 +31,7 @@ class HomeActivity : AppCompatActivity() {
         fadeText.visibility = TextView.VISIBLE
         fadeText.startAnimation(fadeAnim)
 
-        // Play sound
-        mediaPlayer = MediaPlayer.create(this, R.raw.intro)
-        mediaPlayer?.start()
+
     }
 
     override fun onDestroy() {

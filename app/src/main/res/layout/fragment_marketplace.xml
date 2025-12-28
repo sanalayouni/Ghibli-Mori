@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
-    android:background="@color/white">
+    android:background="#FFFFFF"
+    android:fillViewport="true">
 
     <!-- Wrap everything inside one LinearLayout -->
     <LinearLayout
@@ -17,9 +17,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="153dp"
-            android:orientation="horizontal"
             android:gravity="center_vertical"
-            >
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/appLogo"
@@ -27,8 +26,8 @@
                 android:layout_height="80dp"
                 android:layout_marginLeft="10dp"
                 android:padding="0dp"
-                android:src="@drawable/log"
-                android:scaleType="fitStart"/>
+                android:scaleType="fitStart"
+                android:src="@drawable/log" />
         </LinearLayout>
 
 
@@ -42,18 +41,19 @@
                 android:id="@+id/affiche2"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
-                android:src="@drawable/mori"
                 android:layout_gravity="start"
-                android:padding="0dp"/>
+                android:padding="0dp"
+                android:src="@drawable/mori" />
 
         </LinearLayout>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="12dp"
             app:cardElevation="8dp"
-            app:cardBackgroundColor="@android:color/white"
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
             app:strokeColor="#4CAF50"
@@ -85,68 +85,69 @@
         </androidx.cardview.widget.CardView>
 
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="20dp"
+            android:backgroundTint="#4CAF50"
 
+            android:gravity="center"
+            android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:paddingBottom="10dp"
             android:text="Categories"
             android:textColor="#2F2F2F"
             android:textSize="20sp"
-            android:gravity="center"
             android:textStyle="bold" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:layout_marginBottom="5dp"
             android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#FFFFFF"
                 android:orientation="horizontal">
 
                 <!-- All Button -->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="All"
-                    android:elevation="20dp"
-
+                    android:layout_marginEnd="8dp"
                     android:backgroundTint="#FFD700"
-                    android:textColor="#000000"
-                    android:layout_marginEnd="8dp" />
+
+                    android:elevation="20dp"
+                    android:text="All"
+                    android:textColor="#000000" />
 
                 <!-- Clothing Button -->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Clothing"
+                    android:layout_marginEnd="8dp"
                     android:backgroundTint="#F8BBD0"
-                    android:textColor="#000000"
-                    android:layout_marginEnd="8dp" />
+                    android:text="Clothing"
+                    android:textColor="#000000" />
 
                 <!-- Bag Button -->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Bag"
+                    android:layout_marginEnd="8dp"
                     android:backgroundTint="#BBDEFB"
-                    android:textColor="#000000"
-                    android:layout_marginEnd="8dp" />
+                    android:text="Bag"
+                    android:textColor="#000000" />
 
                 <!-- Lamp Button -->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lamp"
                     android:backgroundTint="#FFD700"
+                    android:text="Lamp"
                     android:textColor="#000000" />
             </LinearLayout>
         </HorizontalScrollView>
@@ -156,13 +157,11 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
             android:layout_marginTop="20dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
             android:padding="20dp">
-
-
 
 
             <!-- Copy your figure cards here -->
@@ -171,11 +170,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/card_bg"
-                android:elevation="4dp">
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/productCard1"
@@ -187,167 +186,40 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/figure1"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/figure1" />
                 </androidx.cardview.widget.CardView>
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="20dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/bag1"
-                        android:scaleType="centerCrop" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="20dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/bag3"
-                        android:scaleType="centerCrop" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_marginTop="6dp"
                     android:layout_marginLeft="20dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/figure4"
-                        android:scaleType="centerCrop" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
                     android:layout_marginTop="6dp"
-                    />
+                    android:text="Totoro Plush"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="$34.99"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="14sp" />
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/card_bg"
-                android:elevation="4dp">
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -358,38 +230,38 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/hat1"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bag1" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Totoro Plush"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="6dp"
+                    android:text="Totoro Plush"
                     android:textColor="@color/black"
-                    android:layout_marginLeft="20dp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="$34.99"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/card_bg"
-                android:elevation="4dp">
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -400,37 +272,38 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/figure6"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bag3" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
                     android:text="Totoro Plush"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    android:layout_marginTop="6dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="$34.99"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/card_bg"
-                android:elevation="4dp">
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -441,37 +314,37 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/figure7"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/figure4" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
                     android:text="Totoro Plush"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    android:layout_marginTop="6dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="$34.99"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
-                android:orientation="vertical"
-                android:padding="8dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/card_bg"
-                android:elevation="4dp">
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -482,26 +355,150 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/figure8"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hat1" />
                 </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
                     android:text="Totoro Plush"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:layout_marginTop="6dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:text="$34.99"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:layout_marginTop="2dp"/>
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/card_bg"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/figure6" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Totoro Plush"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="$34.99"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/card_bg"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/figure7" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Totoro Plush"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="$34.99"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/card_bg"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/figure8" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Totoro Plush"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="$34.99"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </GridLayout>
