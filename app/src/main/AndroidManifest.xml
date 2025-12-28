@@ -13,13 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GhibliMori">
         <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
-
             android:name=".StartActivity"
             android:exported="true">
             <intent-filter>

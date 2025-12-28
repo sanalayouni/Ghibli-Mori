@@ -1,5 +1,6 @@
 package sana.ghiblimori
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
@@ -22,6 +23,13 @@ class StartActivity : AppCompatActivity() {
         setContentView(R.layout.activity_start)
         val title = findViewById<TextView>(R.id.titleText)
         val startButton = findViewById<Button>(R.id.startButton)
+
+        startButton.setOnClickListener {
+            // Create an Intent to move from StartActivity to SignupActivity
+            val intent = Intent(this, Signup::class.java)
+            startActivity(intent)
+        }
+
 
 // Fade ONLY the title
         title.startAnimation(

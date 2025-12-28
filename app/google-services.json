@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "531201869390",
+    "project_id": "ghibli-mori",
+    "storage_bucket": "ghibli-mori.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531201869390:android:d9b65cf31f36c89f32a51f",
+        "android_client_info": {
+          "package_name": "sana.ghiblimori"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_HWWvWC7pLQBn-fZgLHI-H6CvZyEZgrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
