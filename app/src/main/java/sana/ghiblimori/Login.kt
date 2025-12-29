@@ -2,6 +2,7 @@ package sana.ghiblimori
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
+import sana.ghiblimori.ui.home.HomeActivity
 
 class Login : AppCompatActivity() {
     private lateinit var email: EditText
@@ -18,7 +20,13 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        val loginButton: Button = findViewById(R.id.loginBtn)
+
         val signupLink: TextView = findViewById(R.id.signupLink)
+        loginButton.setOnClickListener {
+            loginUser()
+        }
+
 
         signupLink.setOnClickListener {
             // Open Login Activity
@@ -43,8 +51,11 @@ class Login : AppCompatActivity() {
             .signInWithEmailAndPassword(userEmail, userPassword)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
-                    // Go to HomeActivity
+
+                    // Navigate to MainActivity which hosts HomeFragment
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+
                 } else {
                     Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
                 }
