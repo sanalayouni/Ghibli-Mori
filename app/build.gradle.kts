@@ -60,7 +60,9 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
-    implementation("com.google.android.material:material")
+    implementation(libs.firebase.firestore)
+
+
 
 
 

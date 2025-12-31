@@ -108,47 +108,13 @@
             android:scrollbars="none">
 
             <LinearLayout
+                android:id="@+id/categoriesContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:orientation="horizontal">
 
-                <!-- All Button -->
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#FFD700"
 
-                    android:elevation="20dp"
-                    android:text="All"
-                    android:textColor="#000000" />
-
-                <!-- Clothing Button -->
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#F8BBD0"
-                    android:text="Clothing"
-                    android:textColor="#000000" />
-
-                <!-- Bag Button -->
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:backgroundTint="#BBDEFB"
-                    android:text="Bag"
-                    android:textColor="#000000" />
-
-                <!-- Lamp Button -->
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#FFD700"
-                    android:text="Lamp"
-                    android:textColor="#000000" />
             </LinearLayout>
         </HorizontalScrollView>
 

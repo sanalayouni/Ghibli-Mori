@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         val fragmentContainer = findViewById<android.view.View>(R.id.fragmentContainer)
 
         // Apply only TOP insets (fixes bottom nav disappearing)
