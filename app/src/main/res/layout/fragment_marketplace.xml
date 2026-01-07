@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Category Buttons Underneath -->
-
+        <!-- Logo Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="153dp"
@@ -30,13 +29,12 @@
                 android:src="@drawable/log" />
         </LinearLayout>
 
-
+        <!-- Banner Image -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Logo Image -->
             <ImageView
                 android:id="@+id/affiche2"
                 android:layout_width="wrap_content"
@@ -44,9 +42,9 @@
                 android:layout_gravity="start"
                 android:padding="0dp"
                 android:src="@drawable/mori" />
-
         </LinearLayout>
 
+        <!-- Search Bar -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,12 +82,11 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-
+        <!-- Categories Title -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#4CAF50"
-
             android:gravity="center"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
@@ -99,6 +96,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!-- Categories Horizontal Scroll -->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,361 +111,44 @@
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:orientation="horizontal">
-
-
             </LinearLayout>
         </HorizontalScrollView>
 
-
-        <!-- Grid of figures -->
-        <GridLayout
+        <!-- 🔥 NEW: RecyclerView for Dynamic Products -->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:padding="20dp">
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="20dp">
 
-
-            <!-- Copy your figure cards here -->
-            <!-- Example item -->
-            <LinearLayout
-                android:layout_width="0dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productsRecyclerView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/productCard1"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/figure1" />
-                </androidx.cardview.widget.CardView>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="0dp"
+            <!-- Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
+                android:layout_gravity="center"
+                android:visibility="gone" />
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bag1" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
+            <!-- Empty State Text -->
+            <TextView
+                android:id="@+id/emptyStateText"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bag3" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/figure4" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/hat1" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/figure6" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/figure7" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="8dp"
-                android:background="@drawable/card_bg"
-                android:elevation="4dp"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="4dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/figure8" />
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="Totoro Plush"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="$34.99"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-        </GridLayout>
+                android:layout_gravity="center"
+                android:text="No products found"
+                android:textColor="#757575"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </FrameLayout>
 
     </LinearLayout>
 </ScrollView>
