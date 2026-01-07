@@ -188,7 +188,8 @@ class MarketplaceFragment : Fragment() {
         allButton.layoutParams = params
 
         allButton.setOnClickListener {
-            Toast.makeText(requireContext(), "Showing all items", Toast.LENGTH_SHORT).show()
+            Log.d(TAG, "🔄 'All' button clicked - showing ${allProducts.size} products")
+            Toast.makeText(requireContext(), "Showing all items (${allProducts.size})", Toast.LENGTH_SHORT).show()
             displayProducts(allProducts)
         }
 
